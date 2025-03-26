@@ -1,0 +1,27 @@
+layout {
+  cwd "~/Documents/projects/TheTdWV_v2/"
+  default_tab_template {
+        // the default zellij tab-bar and status bar plugins
+        pane size=1 borderless=true {
+            plugin location="zellij:tab-bar"
+        }
+        children
+        pane size=1 borderless=true {
+            plugin location="zellij:status-bar"
+        }
+  }
+  tab name="SERVERS" split_direction="vertical" {
+    pane name="SERVER#1" 
+    pane name="SERVER#2"
+  }
+  tab name="EDITOR" {
+    pane name="NVIM" edit="."
+  }
+  tab name="GIT & MISC" split_direction="vertical" focus=true {
+    pane name="LAZYGIT" command="lazygit"
+    pane size="30%" stacked=true {
+      pane name="THRFR CONNECTION" expanded=true
+      pane name="MISC"
+    }
+  }
+}
