@@ -15,7 +15,7 @@ layout {
     pane name="SERVER#2"
   }
   tab name="EDITOR" {
-    pane name="NVIM" edit="."
+    pane name="NVIM"
   }
   tab name="GIT & MISC" split_direction="vertical" focus=true {
     pane name="LAZYGIT" command="lazygit"
